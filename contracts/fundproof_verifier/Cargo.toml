@@ -1,0 +1,15 @@
+[package]
+name = "fundproof_verifier"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = "26.0.0"
+ark-groth16 = { version = "0.4.0", default-features = false }
+ark-bn254 = { version = "0.4.0", default-features = false, features = ["curve"] }
+
+[dev_dependencies]
+soroban-sdk = { version = "26.0.0", features = ["testutils"] }

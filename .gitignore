@@ -1,0 +1,145 @@
+# ---------------------------------------------
+# Node / NestJS
+# ---------------------------------------------
+node_modules/
+dist/
+/build/
+*.tsbuildinfo
+coverage/
+.nyc_output/
+.npm/
+.pnp.*
+.yarn/
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ---------------------------------------------
+# Environment variables / secrets
+# ---------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------
+# Databases (SQLite / TypeORM)
+# ---------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+fundproof.db
+# SQLite sidecar files
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ---------------------------------------------
+# Redis / Bull queue dumps
+# ---------------------------------------------
+dump.rdb
+*.aof
+
+# ---------------------------------------------
+# Zero-knowledge artifacts (circom / snarkjs)
+# ---------------------------------------------
+# Powers of Tau ceremony files (large, generated)
+ptau/
+*.ptau
+# Compiled circuit outputs
+*.r1cs
+*.sym
+*.wasm
+*.zkey
+*.vkey
+*.wtns
+# snarkjs witness-generator folder (e.g. fundproof_js/)
+*_js/
+# Generated keys, proofs and public signals
+verification_key.json
+proof.json
+public.json
+build/circuits/input.json
+# Downloaded prover/verifier tooling (e.g. circom binary)
+/tools/
+circom
+circom.exe
+
+# ---------------------------------------------
+# Rust / Cargo (on-chain verifier contract)
+# ---------------------------------------------
+**/target/
+**/*.rs.bk
+# Windows rustup installer binary (~12 MB, should not be committed)
+rustup-init.exe
+
+# ---------------------------------------------
+# Python (generate_vk.py helper script)
+# ---------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# ---------------------------------------------
+# Windows / native binaries
+# ---------------------------------------------
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ---------------------------------------------
+# Logs & temp
+# ---------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ---------------------------------------------
+# OS metadata
+# ---------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# Linux
+.directory
+
+# ---------------------------------------------
+# IDEs / editors
+# ---------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# ---------------------------------------------
+# Docker
+# ---------------------------------------------
+.docker/
+docker-compose.override.yml
